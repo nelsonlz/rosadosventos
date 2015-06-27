@@ -2,8 +2,41 @@
     ViewBag.Title = "Home";
 }
 
-<div class="row">
-    <div class="col-md-4">.col-md-4</div>
-    <div class="col-md-4">.col-md-4</div>
-    <div class="col-md-4">.col-md-4</div>
+<style>
+    #home {
+	position:absolute;
+	top:35%;
+	left:35%;
+	margin-top:-35px;
+	margin-left:-35px;
+    }
+
+    .top{
+
+    }
+   
+</style>
+
+<div class="row" id="home">
+    <div class="col-md-4 text-center" >
+        
+        <div>
+            <div class="top">
+
+            </div>
+            <div>
+                <img src="@Url.Content("~/Content/images/Financeiro.png")" class="img-responsive" alt="Meu Financeiro" id="boxFinanceiro    " />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div>
+            <img src="@Url.Content("~/Content/images/Obras.png")" class="img-responsive" alt="Acompanhamento de Obras" />
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div>
+            <img src="@Url.Content("~/Content/images/Documents.png")" class="img-responsive" alt="Meus Laudos" />
+        </div>
+    </div>
 </div>
