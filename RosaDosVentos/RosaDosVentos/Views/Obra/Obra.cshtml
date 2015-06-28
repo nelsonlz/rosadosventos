@@ -1,0 +1,62 @@
+﻿@model RosaDosVentos.Models.ObraModel
+
+@{
+    ViewBag.Title = "Obra";
+}
+
+<h2>Obra</h2>
+
+<div id="timeline" >
+    <ul id="dates">
+        @{
+            var inicial = true;
+            var classe = "selected";
+            var datas = Model.Eventos.Select(x => x.DataDoOcorrido);
+            foreach (var item in datas.Select(x => x.ToString("dd/MM/yy")))
+            {
+                if (inicial)
+                {
+                    <li><a href="#@item" class="selected">@item</a></li>
+                }
+                else
+                {
+                    <li><a href="#@item">@item</a></li>
+                }
+                inicial = false;
+            }
+        }
+    </ul>
+
+    <ul id="issues">
+
+        @{  inicial = true;
+          classe = "selected";
+
+          foreach (var item in Model.Eventos)
+          {
+              if (inicial)
+              {
+                <li id="@item.DataDoOcorrido.ToString("dd/MM/yy")" class="selected">
+                    <img src="@Url.Content("~/Content/images/Obras.png")" width="256" height="256" />
+                    <h1>@item.Titulo</h1>
+                    <p>@item.Descricao</p>
+                </li>
+              }
+              else
+              {
+                <li id="@item.DataDoOcorrido.ToString("dd/MM/yy")">
+                    <img src="@Url.Content("~/Content/images/Obras.png")" width="256" height="256" />
+                    <h1>@item.Titulo</h1>
+                    <p>@item.Descricao</p>
+                </li>
+              }
+              inicial = false;
+          }
+
+}
+            </ul>
+            <div id="grad_top"></div>
+            <div id="grad_bottom"></div>
+            <a href="#" id="next">+</a>
+            <a href="#" id="prev">-</a>
+        </div>
