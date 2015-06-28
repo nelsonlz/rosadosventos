@@ -3,15 +3,26 @@
 }
 
 <style>
-    #home {
-	position:absolute;
-	top:40%;
-	left:23%;
-	margin-top:-40px;
-	margin-left:-25px;
+    .btnContainer {
+        width: 250px;
+        height: 300px;
+        display: inline;
+        overflow: hidden;
+        float: left;
+        box-shadow: -2px 2px 2px #888;
+        font-size: 13px;
+        margin-bottom: 10px;
     }
 
-    .top{
+    #home {
+        position: absolute;
+        top: 40%;
+        left: 20%;
+        margin-top: -40px;
+        margin-left: -20px;
+    }
+
+    .top {
         color: #ffffff;
         border-radius: 4px 4px;
         background: #373737;
@@ -19,53 +30,80 @@
         padding: 10px;
         text-align: center;
     }
-    .imagecontainer{
+
+    .imagecontainer {
         background: #f2f3f5;
         padding: 5px;
+        height: 60%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
-   .textoimage{
-       background: #abd43b;
-       padding: 10px;
-       height:80px;
-       
-   }
+
+    .textoimage {
+        background: #abd43b;
+        padding: 10px;
+        height: 100%;
+        text-align: center;
+    }
+
+    .descricao{
+        text-shadow: -1px 1px 1px #888;
+        width: 235px;
+    }
 </style>
 
 <div class="row-fluid" id="home">
-    <div class="col-md-4 text-center" >
-        <div>
+    <div class="col-md-4 text-center">
+        <div class="btnContainer" id="btnFinanceiro">
             <div class="top">
                 Meu Financeiro
             </div>
-            <div class="imagecontainer" style='height: 150px;background-image:url(" @Url.Content("~/Content/images/Financeiro.png")"); background-repeat: no-repeat; background-position: center;'>
+            <div class="imagecontainer" style='background-image:url(" @Url.Content("~/Content/images/Financeiro.png")");'>
             </div>
             <div class="textoimage">
-                <p class="text-center"> Meu acompanhamento financeiro</p>
+                <p class="text-center descricao"> Meu acompanhamento financeiro</p>
             </div>
         </div>
     </div>
     <div class="col-md-4">
-        <div>
+        <div class="btnContainer" id="btnObras">
             <div class="top">
                 Minhas Obras
             </div>
-            <div class="imagecontainer" style='height: 150px;background-image:url(" @Url.Content("~/Content/images/Obras.png")"); background-repeat: no-repeat; background-position: center;'>
+            <div class="imagecontainer" style='background-image:url(" @Url.Content("~/Content/images/Obras.png")");'>
             </div>
             <div class="textoimage">
-                <p class="text-center"> acompanhamento do andamento de minhas obras</p>
+                <p class="text-center descricao"> Acompanhamento do andamento de minhas obras</p>
             </div>
         </div>
     </div>
     <div class="col-md-4">
-        <div>
+        <div class="btnContainer" div="btnDocumentos">
             <div class="top">
                 Meus Laudos
             </div>
-            <div class="imagecontainer" style='height: 150px;background-image:url(" @Url.Content("~/Content/images/Documents.png")"); background-repeat: no-repeat; background-position: center;'>
+            <div class="imagecontainer" style='background-image:url(" @Url.Content("~/Content/images/Documents.png")");'>
             </div>
             <div class="textoimage">
-                <p class="text-center"> Download dos meus laudos</p>
+                <p class="text-center descricao"> Download dos meus laudos</p>
             </div>
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".btnContainer").mouseover(function () {
+            $(this).css("width", '260px');
+            $(this).css("height", '310px');
+            $(this).css('box-shadow', '-10px 10px 5px #888');
+            $(this).css('font-size', '14px');
+        });
+        $(".btnContainer").mouseout(function (event, obj) {
+            $(this).css("width", '250px');
+            $(this).css("height", '300px');
+            $(this).css("box-shadow", '-2px 2px 2px #888');
+            $(this).css('font-size', '13px');
+        });
+    });
+</script>

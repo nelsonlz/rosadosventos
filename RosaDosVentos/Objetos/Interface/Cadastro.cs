@@ -1,12 +1,9 @@
-﻿using System;
+﻿using Persistencia;
+using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using Persistencia;
 
 namespace Regras.Interface
 {
@@ -103,7 +100,7 @@ namespace Regras.Interface
             return dados.Set<T>();
         }
 
-        public IQueryable<T> Buscar(Expression<Func<T,bool>> parametros )
+        public IQueryable<T> Buscar(Expression<Func<T, bool>> parametros)
         {
             return dados.Set<T>().Where(parametros);
         }

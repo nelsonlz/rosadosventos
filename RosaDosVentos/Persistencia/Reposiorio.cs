@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Persistencia.Interface;
+using System;
 using System.Data;
-using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Persistencia.Interface;
 
 namespace Persistencia
 {

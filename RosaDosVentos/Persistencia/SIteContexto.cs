@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Persistencia
+﻿namespace Persistencia
 {
-    public  class SiteContexto : DbContext
+    public class SiteContexto : DbContext
     {
         private readonly bool _excluir = false;
-        
 
         //Inicializar as classes que seram espelhadas em tabelas
         // ex: public DbSet<NomeDaClasse> NomeDaTabela { get; set; }
@@ -29,11 +20,8 @@ namespace Persistencia
                 Database.SetInitializer(new DropCreateDatabaseIfModelChanges<SiteContexto>());
 
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            
+
             base.OnModelCreating(modelBuilder);
-            
         }
     }
-
-
 }
