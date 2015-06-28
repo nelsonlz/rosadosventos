@@ -66,7 +66,7 @@
         </div>
     </div>
     <div class="col-md-4">
-        <div class="btnContainer" id="btnObras">
+        <div class="btnContainer" id="btnObras" onclick="Redirecionar('Obra')">
             <div class="top">
                 Minhas Obras
             </div>
@@ -78,7 +78,7 @@
         </div>
     </div>
     <div class="col-md-4">
-        <div class="btnContainer" div="btnDocumentos">
+        <div class="btnContainer" id="btnDocumentos">
             <div class="top">
                 Meus Laudos
             </div>
@@ -92,7 +92,14 @@
 </div>
 
 <script type="text/javascript">
+    function Redirecionar(destino) {
+        window.location.href = '/'+destino+'/Index';
+    }
+
+    $('btnContainer').click(function () { window.alert('Teste'); });
+
     $(document).ready(function () {
+        debugger;
         $(".btnContainer").mouseover(function () {
             $(this).css("width", '260px');
             $(this).css("height", '310px');
@@ -106,4 +113,7 @@
             $(this).css('font-size', '13px');
         });
     });
+    
+    
+
 </script>

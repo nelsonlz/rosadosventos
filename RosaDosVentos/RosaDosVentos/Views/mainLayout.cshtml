@@ -13,9 +13,6 @@
             background: #d4d5d7;
         }
     </style>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
-    @RenderSection("script", required: false)
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -42,10 +39,10 @@
     <div class="container">
         @RenderBody()
     </div>
-    <script type="text/javascript" src="@Url.Content(" ~ />Scripts/jquery-1.9.1.min.js")"></script>
-    <script type="text/javascript" src="@Url.Content(" ~ />Scripts/jquery-1.9.1.intellisense.js")"></script>
-    <script type="text/javascript" src="@Url.Content(" ~ />Scripts/bootstrap.min.js")"></script>
-    <script type="text/javascript" src="@Url.Content(" ~ />Scripts/jquery.timelinr-0.9.54.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.9.1.intellisense.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.timelinr-0.9.54.js")"></script>
     <script>
         $(function () {
             $().timelinr({

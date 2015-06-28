@@ -12,7 +12,7 @@
             var inicial = true;
             var classe = "selected";
             var datas = Model.Eventos.Select(x => x.DataDoOcorrido);
-            foreach (var item in datas.Select(x => x.ToString("dd/MM/yy")))
+            foreach (var item in datas.Select(x => x.ToString("dd-MM-yy")))
             {
                 if (inicial)
                 {
@@ -36,7 +36,7 @@
           {
               if (inicial)
               {
-                <li id="@item.DataDoOcorrido.ToString("dd/MM/yy")" class="selected">
+                <li id="@item.DataDoOcorrido.ToString("dd-MM-yy")" class="selected">
                     <img src="@Url.Content("~/Content/images/Obras.png")" width="256" height="256" />
                     <h1>@item.Titulo</h1>
                     <p>@item.Descricao</p>
@@ -44,7 +44,7 @@
               }
               else
               {
-                <li id="@item.DataDoOcorrido.ToString("dd/MM/yy")">
+                <li id="@item.DataDoOcorrido.ToString("dd-MM-yy")">
                     <img src="@Url.Content("~/Content/images/Obras.png")" width="256" height="256" />
                     <h1>@item.Titulo</h1>
                     <p>@item.Descricao</p>
