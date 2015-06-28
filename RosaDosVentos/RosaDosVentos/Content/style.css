@@ -49,14 +49,14 @@ a {
 }
 	#timeline {
 		width: 1000px;
-		height: 350px;
+		height: 400px;
 		overflow: hidden;
 		margin: 100px auto;
 		position: relative;
 		background: url('../Content/images/dot.gif') left 45px repeat-x;
 	}
 		#dates {
-			width: 800px;
+			width: 1000px;
 			height: 60px;
 			overflow: hidden;
 		}
@@ -83,8 +83,8 @@ a {
 			overflow: hidden;
 		}	
 			#issues li {
-				width: 800px;
-				height: 350px;
+				width: 1000px;
+				height: 400px;
 				list-style: none;
 				float: left;
 			}
@@ -97,7 +97,7 @@ a {
 				}
 				#issues li img {
 					float: left;
-					margin: 13px 30px 10px 150px;
+					margin: 13px 30px 10px 50px;
 					background: transparent;
 					-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE 8 */   
 					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);/* IE 6 & 7 */      

@@ -1,4 +1,4 @@
-﻿@model RosaDosVentos.Models.ObraModel
+﻿@model DTO.ObraModel
 
 @{
     ViewBag.Title = "Obra";
@@ -37,7 +37,7 @@
               if (inicial)
               {
                 <li id="@item.DataDoOcorrido.ToString("dd-MM-yy")" class="selected">
-                    <img src="@Url.Content("~/Content/images/Obras.png")" width="256" height="256" />
+                    <img src="@Url.Content("~/" + item.Imagem)" width="256" height="256" />
                     <h1>@item.Titulo</h1>
                     <p>@item.Descricao</p>
                 </li>
@@ -45,7 +45,7 @@
               else
               {
                 <li id="@item.DataDoOcorrido.ToString("dd-MM-yy")">
-                    <img src="@Url.Content("~/Content/images/Obras.png")" width="256" height="256" />
+                    <img src="@Url.Content("~/" + item.Imagem)" width="256" height="256" />
                     <h1>@item.Titulo</h1>
                     <p>@item.Descricao</p>
                 </li>

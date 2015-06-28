@@ -14,10 +14,17 @@ namespace Persistencia
     {
         private readonly bool _excluir = false;
 
+        public SiteContexto()
+        {
+            this.Configuration.LazyLoadingEnabled = true;
+        }
+
         //Inicializar as classes que seram espelhadas em tabelas
         // ex: public DbSet<NomeDaClasse> NomeDaTabela { get; set; }
 
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Obra> Obras { get; set; }
+        public DbSet<Evento> Eventos { get; set; }  
 
         public SiteContexto(bool exclui)
         {
@@ -32,6 +39,7 @@ namespace Persistencia
                 Database.SetInitializer(new DropCreateDatabaseIfModelChanges<SiteContexto>());
 
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
             
             base.OnModelCreating(modelBuilder);
             

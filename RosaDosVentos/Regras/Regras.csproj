@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Regras</RootNamespace>
     <AssemblyName>Objetos</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,19 +48,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastroDeEvento.cs" />
+    <Compile Include="CadastroDeObra.cs" />
     <Compile Include="CadastroUsuario.cs" />
     <Compile Include="Interface\Cadastro.cs" />
     <Compile Include="Interface\ICadastro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
-      <Project>{304B604A-7F36-42A3-A85A-411DC0928B46}</Project>
+      <Project>{304b604a-7f36-42a3-a85a-411dc0928b46}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
     <ProjectReference Include="..\Persistencia\Persistencia.csproj">
-      <Project>{7B5A5E51-03D5-4DD9-8C71-2DCA493914EA}</Project>
+      <Project>{7b5a5e51-03d5-4dd9-8c71-2dca493914ea}</Project>
       <Name>Persistencia</Name>
     </ProjectReference>
   </ItemGroup>

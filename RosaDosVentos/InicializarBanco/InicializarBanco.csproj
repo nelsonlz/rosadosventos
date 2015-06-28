@@ -61,13 +61,13 @@
       <Project>{304b604a-7f36-42a3-a85a-411dc0928b46}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Objetos\Regras.csproj">
-      <Project>{ab779ef5-81bf-4f5c-a628-637b1133bf18}</Project>
-      <Name>Regras</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Persistencia\Persistencia.csproj">
       <Project>{7B5A5E51-03D5-4DD9-8C71-2DCA493914EA}</Project>
       <Name>Persistencia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Regras\Regras.csproj">
+      <Project>{ab779ef5-81bf-4f5c-a628-637b1133bf18}</Project>
+      <Name>Regras</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

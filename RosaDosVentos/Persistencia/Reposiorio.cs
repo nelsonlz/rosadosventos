@@ -1,6 +1,7 @@
 ﻿using Persistencia.Interface;
 using System;
 using System.Data;
+using System.Data.Entity;
 using System.Linq;
 
 namespace Persistencia

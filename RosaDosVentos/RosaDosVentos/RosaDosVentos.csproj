@@ -112,13 +112,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\FinanceiroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LaudosController.cs" />
     <Compile Include="Controllers\ObraController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ObraModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -168,13 +169,30 @@
     <Content Include="Views\_viewstart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Obra\Obra.cshtml" />
+    <Content Include="Views\Financeiro\Financeiro.cshtml" />
+    <Content Include="Views\Laudos\Laudos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
     <Folder Include="Views\Projetos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Consultas\Consultas.csproj">
+      <Project>{ae9a6861-cc7a-4bcf-83a7-5f13031174f7}</Project>
+      <Name>Consultas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{da4800ca-426a-4877-9344-c2c557046bc1}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Regras\Regras.csproj">
+      <Project>{ab779ef5-81bf-4f5c-a628-637b1133bf18}</Project>
+      <Name>Regras</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -46,7 +46,7 @@
         text-align: center;
     }
 
-    .descricao{
+    .descricao {
         text-shadow: -1px 1px 1px #888;
         width: 235px;
     }
@@ -54,8 +54,8 @@
 
 <div class="row-fluid" id="home">
     <div class="col-md-4 text-center">
-        <div class="btnContainer" id="btnFinanceiro">
-            <div class="top">
+        <div class="btnContainer" id="btnFinanceiro" onclick="Redirecionar('Financeiro')" onmouseover="MouseOver('btnFinanceiro')" onmouseout=" MouseOut('btnFinanceiro')">
+            <div class=" top">
                 Meu Financeiro
             </div>
             <div class="imagecontainer" style='background-image:url(" @Url.Content("~/Content/images/Financeiro.png")");'>
@@ -66,7 +66,7 @@
         </div>
     </div>
     <div class="col-md-4">
-        <div class="btnContainer" id="btnObras" onclick="Redirecionar('Obra')">
+        <div class="btnContainer" id="btnObras" onclick="Redirecionar('Obra')" onmouseover="MouseOver('btnObras')" onmouseout="MouseOut('btnObras')">
             <div class="top">
                 Minhas Obras
             </div>
@@ -78,7 +78,7 @@
         </div>
     </div>
     <div class="col-md-4">
-        <div class="btnContainer" id="btnDocumentos">
+        <div class="btnContainer" id="btnDocumentos" onclick="Redirecionar('Laudos')" onmouseover="MouseOver('btnDocumentos')" onmouseout="MouseOut('btnDocumentos')">
             <div class="top">
                 Meus Laudos
             </div>
@@ -93,27 +93,19 @@
 
 <script type="text/javascript">
     function Redirecionar(destino) {
-        window.location.href = '/'+destino+'/Index';
+        window.location.href = '/' + destino + '/Index';
     }
+    function MouseOver(id) {
+        $('#' + id).css("width", '260px');
+        $('#' + id).css("height", '310px');
+        $('#' + id).css('box-shadow', '-10px 10px 5px #888');
+        $('#' + id).css('font-size', '14px');
+    };
 
-    $('btnContainer').click(function () { window.alert('Teste'); });
-
-    $(document).ready(function () {
-        debugger;
-        $(".btnContainer").mouseover(function () {
-            $(this).css("width", '260px');
-            $(this).css("height", '310px');
-            $(this).css('box-shadow', '-10px 10px 5px #888');
-            $(this).css('font-size', '14px');
-        });
-        $(".btnContainer").mouseout(function (event, obj) {
-            $(this).css("width", '250px');
-            $(this).css("height", '300px');
-            $(this).css("box-shadow", '-2px 2px 2px #888');
-            $(this).css('font-size', '13px');
-        });
-    });
-    
-    
-
+    function MouseOut(id) {
+        $('#' + id).css("width", '250px');
+        $('#' + id).css("height", '300px');
+        $('#' + id).css("box-shadow", '-2px 2px 2px #888');
+        $('#' + id).css('font-size', '13px');
+    }
 </script>

@@ -1,4 +1,5 @@
-﻿using RosaDosVentos.Models;
+﻿using Consultas;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,13 +15,9 @@ namespace RosaDosVentos.Controllers
 
         public ActionResult Index()
         {
-            var obraModel = new ObraModel();
+            var consultaDeObra = new ConsultaDeObras();
 
-            for (int i = 0; i < 15; i++)
-			{
-                obraModel.Eventos.Add(new EventosModel { Descricao = string.Format("Teste {0}", i), Titulo = string.Format("Evento {0}", i), DataDoOcorrido = DateTime.Now.AddDays(i) });
-			}
-
+            var obraModel = consultaDeObra.ObterPorID(1);
 
             return View("Obra", obraModel);
         }
