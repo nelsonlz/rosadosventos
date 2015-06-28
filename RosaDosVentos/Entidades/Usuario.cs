@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Entidades
 {
@@ -58,8 +53,10 @@ namespace Entidades
             {
                 case Nivel.Administrador:
                     return "A";
+
                 case Nivel.Colaborador:
                     return "C";
+
                 default:
                     return "L";
             }
@@ -71,8 +68,10 @@ namespace Entidades
             {
                 case "A":
                     return Nivel.Administrador;
+
                 case "C":
                     return Nivel.Colaborador;
+
                 default:
                     return Nivel.Leitor;
             }

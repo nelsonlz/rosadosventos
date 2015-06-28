@@ -13,31 +13,39 @@
             background: #d4d5d7;
         }
     </style>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+    @RenderSection("script", required: false)
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Area do cliente</a>
+                <a class="navbar-brand" href="#">Área do cliente</a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home</a></li>
                     <li id="menuAcompanhamentoObra">
-                        @Html.ActionLink("Acompanhamento da obra", "Index", "Obra")
+                        @Html.ActionLink("Meu Financeiro", "Index", "Financeiro")
+                    </li>
+                    <li id="menuAcompanhamentoObra">
+                        @Html.ActionLink("Minhas Obras", "Index", "Obra")
+                    </li>
+                    <li id="menuAcompanhamentoObra">
+                        @Html.ActionLink("Meus Laudos", "Index", "Laudos")
                     </li>
                 </ul>
             </div>
         </div>
-        
     </div>
     <div class="container">
         @RenderBody()
     </div>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.9.1.intellisense.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.timelinr-0.9.54.js")"></script>
+    <script type="text/javascript" src="@Url.Content(" ~ />Scripts/jquery-1.9.1.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content(" ~ />Scripts/jquery-1.9.1.intellisense.js")"></script>
+    <script type="text/javascript" src="@Url.Content(" ~ />Scripts/bootstrap.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content(" ~ />Scripts/jquery.timelinr-0.9.54.js")"></script>
     <script>
         $(function () {
             $().timelinr({

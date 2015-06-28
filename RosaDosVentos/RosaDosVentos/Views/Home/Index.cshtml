@@ -3,40 +3,107 @@
 }
 
 <style>
+    .btnContainer {
+        width: 250px;
+        height: 300px;
+        display: inline;
+        overflow: hidden;
+        float: left;
+        box-shadow: -2px 2px 2px #888;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
     #home {
-	position:absolute;
-	top:35%;
-	left:35%;
-	margin-top:-35px;
-	margin-left:-35px;
+        position: absolute;
+        top: 40%;
+        left: 20%;
+        margin-top: -40px;
+        margin-left: -20px;
     }
 
-    .top{
-
+    .top {
+        color: #ffffff;
+        border-radius: 4px 4px;
+        background: #373737;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
     }
-   
+
+    .imagecontainer {
+        background: #f2f3f5;
+        padding: 5px;
+        height: 60%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .textoimage {
+        background: #abd43b;
+        padding: 10px;
+        height: 100%;
+        text-align: center;
+    }
+
+    .descricao{
+        text-shadow: -1px 1px 1px #888;
+        width: 235px;
+    }
 </style>
 
-<div class="row" id="home">
-    <div class="col-md-4 text-center" >
-        
-        <div>
+<div class="row-fluid" id="home">
+    <div class="col-md-4 text-center">
+        <div class="btnContainer" id="btnFinanceiro">
             <div class="top">
-
+                Meu Financeiro
             </div>
-            <div>
-              <img src="@Url.Content("~/Content/images/Financeiro.png")" class="img-responsive" alt="Meu Financeiro" id="boxFinanceiro    " />
+            <div class="imagecontainer" style='background-image:url(" @Url.Content("~/Content/images/Financeiro.png")");'>
+            </div>
+            <div class="textoimage">
+                <p class="text-center descricao"> Meu acompanhamento financeiro</p>
             </div>
         </div>
     </div>
     <div class="col-md-4">
-        <div>
-            <img src="@Url.Content("~/Content/images/Obras.png")" class="img-responsive" alt="Acompanhamento de Obras" />
+        <div class="btnContainer" id="btnObras">
+            <div class="top">
+                Minhas Obras
+            </div>
+            <div class="imagecontainer" style='background-image:url(" @Url.Content("~/Content/images/Obras.png")");'>
+            </div>
+            <div class="textoimage">
+                <p class="text-center descricao"> Acompanhamento do andamento de minhas obras</p>
+            </div>
         </div>
     </div>
     <div class="col-md-4">
-        <div>
-            <img src="@Url.Content("~/Content/images/Documents.png")" class="img-responsive" alt="Meus Laudos" />
+        <div class="btnContainer" div="btnDocumentos">
+            <div class="top">
+                Meus Laudos
+            </div>
+            <div class="imagecontainer" style='background-image:url(" @Url.Content("~/Content/images/Documents.png")");'>
+            </div>
+            <div class="textoimage">
+                <p class="text-center descricao"> Download dos meus laudos</p>
+            </div>
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".btnContainer").mouseover(function () {
+            $(this).css("width", '260px');
+            $(this).css("height", '310px');
+            $(this).css('box-shadow', '-10px 10px 5px #888');
+            $(this).css('font-size', '14px');
+        });
+        $(".btnContainer").mouseout(function (event, obj) {
+            $(this).css("width", '250px');
+            $(this).css("height", '300px');
+            $(this).css("box-shadow", '-2px 2px 2px #888');
+            $(this).css('font-size', '13px');
+        });
+    });
+</script>
