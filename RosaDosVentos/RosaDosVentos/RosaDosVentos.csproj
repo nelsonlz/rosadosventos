@@ -150,6 +150,16 @@
     <Content Include="Content\bootstrap.css.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Icon.png" />
+    <Content Include="Imagens\Evento\1-01.jpg" />
+    <Content Include="Imagens\Evento\1-02.jpg" />
+    <Content Include="Imagens\Evento\1-03.jpg" />
+    <Content Include="Imagens\Evento\1-04.jpg" />
+    <Content Include="Imagens\Evento\1-05.jpg" />
+    <Content Include="Imagens\Evento\1-06.jpg" />
+    <Content Include="Imagens\Evento\1-07.jpg" />
+    <Content Include="Imagens\Evento\1-08.jpg" />
+    <Content Include="Imagens\Evento\1-09.jpg" />
+    <Content Include="Imagens\Evento\1-10.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
